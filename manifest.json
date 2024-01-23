@@ -1,0 +1,25 @@
+{
+  "name": "OAuth Chrome Extension",
+  "version": "1.0",
+  "description": "Demo OAuth Flow in chrome extension",
+  "manifest_version": 3,
+  "action": {
+    "default_title": "FriendBlock, friends face's in a block.",
+    "default_popup": "popup.html"
+  },
+  "oauth2": {
+    "client_id": "<Client-ID>",
+    "scopes": [
+      "profile",
+      "email",
+      "https://www.googleapis.com/auth/contacts.readonly"
+    ]
+  },
+  "permissions": [
+    "identity",
+    "activeTab", "scripting", "identity"
+  ],
+  "background": {
+    "service_worker": "service-worker.js"
+  }
+}
